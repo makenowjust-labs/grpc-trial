@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package echo;
+
+service Echo {
+  rpc Connect(stream Message) returns (stream Message);
+}
+
+message Message {
+  string body = 1;
+}
